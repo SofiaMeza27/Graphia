@@ -1,0 +1,7 @@
+{
+  "name": "Graphia",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
