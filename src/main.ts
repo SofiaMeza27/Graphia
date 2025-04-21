@@ -1,6 +1,10 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';
+import { AppComponent } from './app/app.component';
+import { register } from 'swiper/element/bundle';
 
-import { AppModule } from './app/app.module';
+// Registra los componentes de Swiper
+register();
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));

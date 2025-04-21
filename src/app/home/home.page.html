@@ -1,116 +1,67 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="light">
+<ion-header>
+  <ion-toolbar color="primary">
     <ion-title>
-      <strong>Graphia </strong>
+      <strong>Graphia</strong>
     </ion-title>
     <ion-buttons slot="end">
-      <ion-icon name="cart-outline" slot="icon-only"></ion-icon>
+      <ion-icon name="cart-outline" size="large"></ion-icon>
     </ion-buttons>
-  </ion-toolbar>
-  <ion-toolbar>
-    <ion-segment value="inicio">
-      <ion-segment-button value="inicio">
-        <ion-label>Inicio</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="categorias">
-        <ion-label>categorias</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="marcas">
-        <ion-label>Marcas</ion-label>
-      </ion-segment-button>
-    </ion-segment>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  
-  <!-- Banner oferta sillas -->
-  <ion-img src="assets/img/descuento-sillas.png" style="border-radius: 10px; margin-bottom: 20px;"></ion-img>
+  <!-- Banner principal -->
+  <div class="main-banner">
+    <div class="banner-content">
+      <div class="banner-tag">30%</div>
+      <div class="banner-code">DG78</div>
+      <h1>SILLAS<br>DE OFICINA</h1>
+    </div>
+  </div>
 
-  <!-- Carrusel de productos con Swiper -->
-  <swiper-container [slidesPerView]="1.2" [spaceBetween]="10" [pagination]="true">
-    <swiper-slide>
-      <ion-card>
-        <ion-img src="https://placehold.co/300x200?text=Producto+1"></ion-img>
-      </ion-card>
-    </swiper-slide>
-    <swiper-slide>
-      <ion-card>
-        <ion-img src="https://placehold.co/300x200?text=Producto+2"></ion-img>
-      </ion-card>
-    </swiper-slide>
-    <swiper-slide>
-      <ion-card>
-        <ion-img src="https://placehold.co/300x200?text=Producto+3"></ion-img>
-      </ion-card>
-    </swiper-slide>
-  </swiper-container>
+  <!-- Categorías -->
+  <div class="categories-section">
+    <h2 class="section-title">CATEGORÍAS</h2>
+    <div class="categories-grid">
+      <div class="category-item" *ngFor="let category of categories">
+        <div class="category-icon">
+          <ion-icon [name]="category.icon"></ion-icon>
+        </div>
+        <div class="category-name">{{category.name}}</div>
+        <div class="category-subtitle">{{category.subtitle}}</div>
+      </div>
+    </div>
+  </div>
 
-  <!-- Categoria productos -->
-  <ion-grid>
-    <ion-row>
-      <ion-col size="4">
-        <ion-card>
-          <ion-img src="assets/img/libreta.png"></ion-img>
+  <!-- Productos destacados -->
+  <div class="featured-section">
+    <h2 class="section-title">PRODUCTOS DESTACADOS</h2>
+    <swiper-container [slidesPerView]="1.2" [spaceBetween]="10">
+      <swiper-slide *ngFor="let product of featuredProducts">
+        <ion-card class="product-card">
+          <img [src]="product.image" class="product-image">
           <ion-card-header>
-            <ion-card-title>Libretas</ion-card-title>
-            <ion-card-subtitle>Arte</ion-card-subtitle>
+            <ion-card-title>{{product.name}}</ion-card-title>
+            <ion-card-subtitle>{{product.price}}</ion-card-subtitle>
           </ion-card-header>
         </ion-card>
-      </ion-col>
-      <ion-col size="4">
-        <ion-card>
-          <ion-img src="assets/img/lapices.png"></ion-img>
-          <ion-card-header>
-            <ion-card-title>Lapices</ion-card-title>
-            <ion-card-subtitle>Sillas</ion-card-subtitle>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-      <ion-col size="4">
-        <ion-card>
-          <ion-img src="assets/img/estuches.png"></ion-img>
-          <ion-card-header>
-            <ion-card-title>Estuches</ion-card-title>
-            <ion-card-subtitle>Oficina</ion-card-subtitle>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+      </swiper-slide>
+    </swiper-container>
+  </div>
 
-  <!-- Opiniones con Swiper -->
-  <swiper-container [slidesPerView]="1.1" [spaceBetween]="10" [pagination]="true">
-    <swiper-slide>
-      <ion-card>
-        <ion-card-content>
-          ⭐⭐⭐⭐⭐ <br>
-          Excelente catálogo y páginas amigables con la vista
-        </ion-card-content>
-      </ion-card>
-    </swiper-slide>
-    <swiper-slide>
-      <ion-card>
-        <ion-card-content>
-          ⭐⭐⭐⭐⭐ <br>
-          Muchos modelos buenos, muy fácil de usar.
-        </ion-card-content>
-      </ion-card>
-    </swiper-slide>
-    <swiper-slide>
-      <ion-card>
-        <ion-card-content>
-          ⭐⭐⭐ <br>
-          Bonita página, pero faltan herramientas.
-        </ion-card-content>
-      </ion-card>
-    </swiper-slide>
-  </swiper-container>
-
-  <!--final de pagina-->
-  <div style="margin-top: 30px; text-align: center; font-size: 0.9em;">
-    <p>📞+56954119955 &nbsp; 📧 graphia&#64;gmail.com</p>
-    <p>📍 Región Metropolitana - Graphia</p>
-    <p>© 2025 Atención al cliente | Mi cuenta | Preguntas frecuentes | Devoluciones y reembolsos</p>
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-section">
+      <h3>ATENCIÓN AL CLIENTE</h3>
+      <p>📞 +56954119955</p>
+      <p>📧 graphia@gmail.com</p>
+    </div>
+    <div class="footer-section">
+      <h3>UBICACIÓN</h3>
+      <p>📍 Región Metropolitana</p>
+    </div>
+    <div class="footer-copyright">
+      <p>© 2025 Graphia - Todos los derechos reservados</p>
+    </div>
   </div>
 </ion-content>
