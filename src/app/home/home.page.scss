@@ -1,177 +1,166 @@
-/* Banner principal */
-.main-banner {
-  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 25px;
-  position: relative;
-  height: 180px;
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+ion-searchbar {
+  flex: 1;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  height: 50px;
+  --background: #f5f5f5;
+  --border-radius: 25px;
+}
+
+ion-title {
+  flex: 0 0 auto;
+  text-align: left;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+ion-toolbar{
+  --background: var(--ion-color-ffafcc);
   display: flex;
   align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-  .banner-content {
-    z-index: 2;
-    
-    .banner-tag {
-      background-color: #ff6b6b;
-      color: white;
-      display: inline-block;
-      padding: 5px 15px;
-      border-radius: 20px;
-      font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .banner-code {
-      font-size: 12px;
-      color: #666;
-      margin-bottom: 5px;
-      font-weight: 500;
-    }
-
-    h1 {
-      font-size: 24px;
-      font-weight: 800;
-      margin: 0;
-      line-height: 1.2;
-      color: #333;
-      text-transform: uppercase;
-    }
-  }
+  justify-content: space-between;
 }
 
-/* Sección de categorías */
-.categories-section {
-  margin-bottom: 30px;
+.banner-img{
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
   
-  .section-title {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
+  max-width: 90%;
+  height: auto;
+  border-radius: 0px;
   
-  .categories-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    
-    .category-item {
-      text-align: center;
-      padding: 15px 5px;
-      background-color: #f9f9f9;
-      border-radius: 10px;
-      transition: transform 0.2s;
-      
-      &:active {
-        transform: scale(0.98);
-      }
-      
-      .category-icon {
-        font-size: 28px;
-        margin-bottom: 8px;
-        color: var(--ion-color-primary);
-      }
-      
-      .category-name {
-        font-weight: 600;
-        font-size: 14px;
-        margin-bottom: 3px;
-        color: #444;
-      }
-      
-      .category-subtitle {
-        font-size: 12px;
-        color: #666;
-        font-weight: 500;
-      }
-    }
-  }
 }
 
-/* Productos destacados */
-.featured-section {
-  margin-bottom: 30px;
+.linea-separadora{
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: #ffafcc;
   
-  .section-title {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
+  margin-top: 20px;
+  margin-bottom: 20px;
   
-  .product-card {
-    margin: 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    overflow: hidden;
-    height: 100%;
-    
-    .product-image {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-    }
-    
-    ion-card-header {
-      padding: 12px;
-      
-      ion-card-title {
-        font-size: 15px;
-        font-weight: 600;
-        margin-bottom: 5px;
-      }
-      
-      ion-card-subtitle {
-        font-size: 14px;
-        color: var(--ion-color-primary);
-        font-weight: 700;
-      }
-    }
-  }
 }
 
-/* Footer */
-.footer {
-  background-color: #f5f5f5;
-  border-radius: 12px;
-  padding: 20px;
-  margin-top: 30px;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
-  
-  .footer-section {
-    margin-bottom: 15px;
-    
-    h3 {
-      font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: #333;
-    }
-    
-    p {
-      margin: 5px 0;
-      font-size: 14px;
-      color: #666;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-  }
-  
-  .footer-copyright {
-    text-align: center;
-    font-size: 12px;
-    color: #999;
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #eee;
-  }
+swiper-container {
+  width: 100%; /* Asegura que el carrusel ocupe todo el ancho */
+  height: auto; /* Ajusta la altura automáticamente */
+}
+
+swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-card {
+  width: 85%; /* Ajusta el ancho de las tarjetas */
+  height: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un diseño limpio */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.custom-swiper {
+  background-color: #31CDC2; /* Color de fondo del carrusel */
+  padding: 20px 0px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000000; /* Color de las flechas */
+  font-size: 20px; /* Tamaño de las flechas */
+  font-weight: bold; /* Negrita para las flechas */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: '';
+}
+
+.category-card {
+  text-align: center; /* Centra el contenido */
+  box-shadow: none; /* Elimina sombras adicionales */
+  border-radius: 5px; /* Bordes ligeramente redondeados */
+}
+
+.category-card ion-img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+  height: 100%; /* Ajusta la altura de las imágenes */
+  object-fit: cover; /* Mantiene la proporción de las imágenes */
+}
+
+.category-card ion-card-title {
+  font-size: 16px; /* Ajusta el tamaño del título */
+  font-weight: bold; /* Negrita para el título */
+  margin-top: 10px; /* Espaciado superior */
+}
+
+.custom-opinion-swiper {
+  background-color: #31CDC2; /* Color de fondo del carrusel */
+  padding: 20px 0px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.custom-opinion-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-opinion-swiper ion-card {
+  width: 85%; /* Ajusta el ancho de las tarjetas */
+  height: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un diseño limpio */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.custom-opinion-swiper .swiper-button-next,
+.custom-opinion-swiper .swiper-button-prev {
+  color: #ffffff; /* Color de las flechas */
+  font-size: 20px; /* Tamaño de las flechas */
+  font-weight: bold; /* Negrita para las flechas */
+}
+
+.custom-opinion-swiper .swiper-button-next::after,
+.custom-opinion-swiper .swiper-button-prev::after {
+  content: '';
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
 }

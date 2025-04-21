@@ -1,67 +1,205 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>
-      <strong>Graphia</strong>
+<ion-header [translucent]="true">
+  <ion-toolbar color="ffafcc">
+    <ion-title slot="start">
+      <strong class="graphia-title">Graphia</strong>
     </ion-title>
+    <ion-searchbar placeholder="Buscar productos" (ionInput)="onSearch($event)" class="centered-searchbara"></ion-searchbar>
     <ion-buttons slot="end">
-      <ion-icon name="cart-outline" size="large"></ion-icon>
+      <ion-icon name="cart-outline" slot="icon-only"></ion-icon>
+      <ion-icon name="person-circle-outline" slot="icon-only"></ion-icon>
     </ion-buttons>
+  </ion-toolbar>
+
+  <!-- Segmento con categorías -->
+  <ion-toolbar>
+    <ion-segment value="inicio">
+      <ion-segment-button value="inicio">
+        <ion-label>Inicio</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="categorias">
+        <ion-label>Categorías</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="marcas">
+        <ion-label>Marcas</ion-label>
+      </ion-segment-button>
+    </ion-segment>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <!-- Banner principal -->
-  <div class="main-banner">
-    <div class="banner-content">
-      <div class="banner-tag">30%</div>
-      <div class="banner-code">DG78</div>
-      <h1>SILLAS<br>DE OFICINA</h1>
-    </div>
-  </div>
+  
+  <!-- Banner oferta sillas -->
+  <ion-img src="assets/descuento-sillas.png" class="banner-img">
 
-  <!-- Categorías -->
-  <div class="categories-section">
-    <h2 class="section-title">CATEGORÍAS</h2>
-    <div class="categories-grid">
-      <div class="category-item" *ngFor="let category of categories">
-        <div class="category-icon">
-          <ion-icon [name]="category.icon"></ion-icon>
-        </div>
-        <div class="category-name">{{category.name}}</div>
-        <div class="category-subtitle">{{category.subtitle}}</div>
-      </div>
-    </div>
-  </div>
+  </ion-img>
 
-  <!-- Productos destacados -->
-  <div class="featured-section">
-    <h2 class="section-title">PRODUCTOS DESTACADOS</h2>
-    <swiper-container [slidesPerView]="1.2" [spaceBetween]="10">
-      <swiper-slide *ngFor="let product of featuredProducts">
-        <ion-card class="product-card">
-          <img [src]="product.image" class="product-image">
+  <!--linea para separar-->
+  <div class="linea-separadora"></div>
+
+  <!-- Carrusel de productos con Swiper -->
+  <swiper-container [slidesPerView]="3" [spaceBetween]="10" [navigation]="true" [pagination]="false" class="custom-swiper">
+    <swiper-slide>
+      <ion-card>
+        <ion-img src="https://placehold.co/300x200?text=Producto+1"></ion-img>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card>
+        <ion-img src="https://placehold.co/300x200?text=Producto+2"></ion-img>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card>
+        <ion-img src="https://placehold.co/300x200?text=Producto+3"></ion-img>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card>
+        <ion-img src="https://placehold.co/300x200?text=Producto+4"></ion-img>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card>
+        <ion-img src="https://placehold.co/300x200?text=Producto+5"></ion-img>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card>
+        <ion-img src="https://placehold.co/300x200?text=Producto+6"></ion-img>
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
+
+
+  <!--linea para separar-->
+  <div class="linea-separadora"></div>
+
+  <!-- Categoria productos -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-card class="category-card">
+          <ion-img src="assets/Libretas.png"></ion-img>
           <ion-card-header>
-            <ion-card-title>{{product.name}}</ion-card-title>
-            <ion-card-subtitle>{{product.price}}</ion-card-subtitle>
+            <ion-card-title>Libretas</ion-card-title>
+            
           </ion-card-header>
         </ion-card>
-      </swiper-slide>
-    </swiper-container>
-  </div>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card class="category-card">
+          <ion-img src="assets/Lapices.png"></ion-img>
+          <ion-card-header>
+            <ion-card-title>Lapices</ion-card-title>
+            
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card class="category-card">
+          <ion-img src="assets/Estuches.png"></ion-img>
+          <ion-card-header>
+            <ion-card-title>Estuches</ion-card-title>
+            
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
 
-  <!-- Footer -->
-  <div class="footer">
-    <div class="footer-section">
-      <h3>ATENCIÓN AL CLIENTE</h3>
-      <p>📞 +56954119955</p>
-      <p>📧 graphia@gmail.com</p>
-    </div>
-    <div class="footer-section">
-      <h3>UBICACIÓN</h3>
-      <p>📍 Región Metropolitana</p>
-    </div>
-    <div class="footer-copyright">
-      <p>© 2025 Graphia - Todos los derechos reservados</p>
-    </div>
+      <ion-col size="4">
+        <ion-card class="category-card">
+          <ion-img src="assets/Arte.png"></ion-img>
+          <ion-card-header>
+            <ion-card-title>Arte</ion-card-title>
+            
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="4">
+        <ion-card class="category-card">
+          <ion-img src="assets/Sillas.png"></ion-img>
+          <ion-card-header>
+            <ion-card-title>Sillas</ion-card-title>
+            
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card class="category-card">
+          <ion-img src="assets/Oficina.png"></ion-img>
+          <ion-card-header>
+            <ion-card-title>Oficina</ion-card-title>
+            
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <!--linea para separar-->
+  <div class="linea-separadora"></div>
+
+  <!-- Opiniones con Swiper -->
+  <swiper-container [slidesPerView]="3" [spaceBetween]="10" [navigation]="true" [pagination]="false" class="custom-opinion-swiper">
+    <swiper-slide>
+      <ion-card>
+        <ion-card-content>
+          <div class="opinion-header">
+            <img src="assets/javiera.png" alt="Javiera" class="profile-img">
+          <div>
+            <strong>Javiera</strong>, Artista <br>
+          ⭐⭐⭐⭐⭐
+          </div>
+        </div>
+          <p class="opinion-text">Excelente catálogo y páginas amigables con la vista</p> 
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+
+    <swiper-slide>
+      <ion-card>
+        <ion-card-content>
+          <div class="opinion-header">
+            <img src="assets/ignacio.png" alt="Ignacio" class="profile-img">
+          <div>
+            <strong>Ignacio</strong>, Estudiante <br>
+          ⭐⭐⭐⭐⭐
+          </div>
+        </div>
+          <p class="opinion-text">Mucha variedad de productos, buenas marcas y rápido envío. Súper recomendado.</p> 
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+
+    <swiper-slide>
+      <ion-card>
+        <ion-card-content>
+          <div class="opinion-header">
+            <img src="assets/magaly.png" alt="Magaly" class="profile-img">
+          <div>
+            <strong>Magaly</strong>, Trabajadora <br>
+          ⭐⭐⭐⭐⭐
+          </div>
+        </div>
+          <p class="opinion-text">Muy bonita la página, pero no tienen herramientas.</p> 
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+    
+    <swiper-slide>
+      <ion-card>
+        <ion-card-content>
+          ⭐⭐⭐ <br>
+          Bonita página, pero faltan calcetines.
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
+
+  <!--final de pagina-->
+  <div style="margin-top: 30px; text-align: center; font-size: 0.9em;">
+    <p>📞+56954119955 &nbsp; 📧 graphia&#64;gmail.com</p>
+    <p>📍 Región Metropolitana - Graphia</p>
+    <p>© 2025 Atención al cliente | Mi cuenta | Preguntas frecuentes | Devoluciones y reembolsos</p>
   </div>
 </ion-content>
