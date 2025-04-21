@@ -24,33 +24,29 @@
 
 <ion-content class="ion-padding">
   
-   <!-- Banner oferta sillas -->
-
+  <!-- Banner oferta sillas -->
   <ion-img src="assets/img/descuento-sillas.png" style="border-radius: 10px; margin-bottom: 20px;"></ion-img>
 
-   <!-- Carrusel -->
-
-  <ion-slides [options]="{ slidesPerView: 1.2, spaceBetween: 10 }">
-    <ion-slide>
+  <!-- Carrusel de productos con Swiper -->
+  <swiper-container [slidesPerView]="1.2" [spaceBetween]="10" [pagination]="true">
+    <swiper-slide>
       <ion-card>
         <ion-img src="https://placehold.co/300x200?text=Producto+1"></ion-img>
       </ion-card>
-    </ion-slide>
-    <ion-slide>
+    </swiper-slide>
+    <swiper-slide>
       <ion-card>
         <ion-img src="https://placehold.co/300x200?text=Producto+2"></ion-img>
       </ion-card>
-    </ion-slide>
-    <ion-slide>
+    </swiper-slide>
+    <swiper-slide>
       <ion-card>
         <ion-img src="https://placehold.co/300x200?text=Producto+3"></ion-img>
       </ion-card>
-    </ion-slide>
-  </ion-slides>
-  
+    </swiper-slide>
+  </swiper-container>
 
-   <!-- Categoria productos -->
-
+  <!-- Categoria productos -->
   <ion-grid>
     <ion-row>
       <ion-col size="4">
@@ -83,36 +79,35 @@
     </ion-row>
   </ion-grid>
 
-   <!-- opiniones -->
-
-   <ion-slides [options]="{ slidesPerView: 1.1, spaceBetween: 10 }">
-    <ion-slide>
+  <!-- Opiniones con Swiper -->
+  <swiper-container [slidesPerView]="1.1" [spaceBetween]="10" [pagination]="true">
+    <swiper-slide>
       <ion-card>
         <ion-card-content>
           ⭐⭐⭐⭐⭐ <br>
           Excelente catálogo y páginas amigables con la vista
         </ion-card-content>
       </ion-card>
-    </ion-slide>
-    <ion-slide>
+    </swiper-slide>
+    <swiper-slide>
       <ion-card>
         <ion-card-content>
           ⭐⭐⭐⭐⭐ <br>
           Muchos modelos buenos, muy fácil de usar.
         </ion-card-content>
       </ion-card>
-    </ion-slide>
-    <ion-slide>
+    </swiper-slide>
+    <swiper-slide>
       <ion-card>
         <ion-card-content>
           ⭐⭐⭐ <br>
           Bonita página, pero faltan herramientas.
         </ion-card-content>
       </ion-card>
-    </ion-slide>
-  </ion-slides>
+    </swiper-slide>
+  </swiper-container>
 
-   <!--final de apgina-->
+  <!--final de pagina-->
   <div style="margin-top: 30px; text-align: center; font-size: 0.9em;">
     <p>📞+56954119955 &nbsp; 📧 graphia&#64;gmail.com</p>
     <p>📍 Región Metropolitana - Graphia</p>
