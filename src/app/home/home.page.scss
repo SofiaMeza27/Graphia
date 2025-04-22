@@ -8,10 +8,20 @@
   transform: translateY(-50%);
 }
 
+
+.graphia-title {
+  font-family: 'Enriqueta';
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000; 
+  flex: 0 0 auto;
+}
+
 ion-searchbar {
-  flex: 1;
-  margin: 0 auto;
-  width: 100%;
+  font-family: 'Enriqueta';
+  flex: 1; /* Permite que el searchbar ocupe todo el espacio disponible */
+  margin: 0 auto; /* Centra el searchbar */
+  width: 100%; /* Asegura que el searchbar ocupe todo el ancho */
   max-width: 500px;
   height: 50px;
   --background: #f5f5f5;
@@ -19,17 +29,32 @@ ion-searchbar {
 }
 
 ion-title {
-  flex: 0 0 auto;
+  flex: 0 0 auto; 
   text-align: left;
-  font-size: 20px;
-  margin-left: 10px;
+  font-size: 40px;
+  margin-left: 15px;
 }
 
-ion-toolbar{
-  --background: var(--ion-color-ffafcc);
+/* Fondo de la barra de búsqueda */
+ion-toolbar:first-of-type {
+  --background: #ffafcc; /* Rosa fuerte */
+}
+
+/* Fondo de "Inicio", "Categorías", "Marcas" */
+ion-toolbar:nth-of-type(2) {
+  --background: #ffafcc86; /* Rosa claro */
+}
+
+ion-tolbar{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+ion-buttons ion-icon{
+  font-size: 40px; /* Tamaño del icono */
+  margin-right: 30px; /* Espaciado a la izquierda */
+  color: #000000; /* Color del icono */
 }
 
 .banner-img{
@@ -81,14 +106,14 @@ ion-card {
 }
 
 .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Asegura que cada slide ocupe el mismo espacio */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #000000; /* Color de las flechas */
+  --color: #000000; /* Color de las flechas */
   font-size: 20px; /* Tamaño de las flechas */
   font-weight: bold; /* Negrita para las flechas */
 }
@@ -111,35 +136,40 @@ ion-card {
 }
 
 .category-card ion-card-title {
-  font-size: 16px; /* Ajusta el tamaño del título */
+  font-family: 'Enriqueta';
+  font-size: 30px; /* Ajusta el tamaño del título */
   font-weight: bold; /* Negrita para el título */
   margin-top: 10px; /* Espaciado superior */
 }
 
 .custom-opinion-swiper {
   background-color: #31CDC2; /* Color de fondo del carrusel */
-  padding: 20px 0px; /* Espaciado interno */
+  padding: 20px 5px; /* Espaciado interno */
   border-radius: 10px; /* Bordes redondeados */
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .custom-opinion-swiper .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Asegura que cada slide ocupe el mismo espacio */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
 }
 
 .custom-opinion-swiper ion-card {
   width: 85%; /* Ajusta el ancho de las tarjetas */
-  height: auto;
+  height: auto; /* Ajusta la altura automáticamente */
+  background-color: #F0F0F0; /* Color de fondo blanco para las tarjetas */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un diseño limpio */
   border-radius: 10px; /* Bordes redondeados */
+  
 }
 
 .custom-opinion-swiper .swiper-button-next,
 .custom-opinion-swiper .swiper-button-prev {
-  color: #ffffff; /* Color de las flechas */
-  font-size: 20px; /* Tamaño de las flechas */
-  font-weight: bold; /* Negrita para las flechas */
+  color: #ffffff;/* Color de las flechas */
+  font-size: 5px; /* Tamaño de las flechas */
+  
 }
 
 .custom-opinion-swiper .swiper-button-next::after,
@@ -147,6 +177,75 @@ ion-card {
   content: '';
 }
 
+.opinion-header {
+  display: flex; /* Crea un contenedor flexible */
+  align-items: center; /* Alinea verticalmente los elementos */
+  gap: 10px; /* Espaciado entre el avatar y el contenido */
+}
+
+.opinion-header img {
+  width: 50px; /* Tamaño del avatar */
+  height: 50px;
+  border-radius: 50%; /* Hace que el avatar sea circular */
+}
+
+.opinion-header div {
+  display: flex;
+  flex-direction: column; /* Coloca el contenido (estrellas, nombre, ocupación) en columna */
+  align-items: flex-start; /* Alinea el contenido a la izquierda */
+}
+
+.opinion-header strong {
+  font-family: 'Enriqueta';
+  font-size: 14px; /* Tamaño del nombre */
+  font-weight: bold; /* Negrita para el nombre */
+}
+
+.opinion-text {
+  font-family: 'Enriqueta';
+  font-size: 18px; /* Tamaño del texto de la reseña */
+  text-align: center; /* Centra el texto de la reseña */
+  margin-top: 10px; /* Espaciado superior */
+  
+  color: #333; /* Color del texto */
+}
+
+.opinion-header .stars {
+  font-size: 14px; /* Tamaño de las estrellas */
+  color: #ffd700; /* Color dorado para las estrellas */
+}
+
+
+.home-footer {
+  font-family: 'Enriqueta';
+  position: relative; /* Cambia a relative si fixed no es necesario */
+  bottom: 0; 
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  background-color: #ffafcc; /* Fondo rosa */
+  color: #ffffff; /* Texto blanco */
+  display: flex;
+  justify-content: space-around; /* Espaciado uniforme entre las secciones */
+  align-items: flex-start; /* Alinea las secciones al inicio */
+  padding: 20px; /* Espaciado interno */
+  font-size: 0.9em; /* Tamaño de fuente */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra superior */
+  margin-bottom: 96px;
+}
+
+.footer-section {
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.footer-section h3 {
+  font-size: 1.2em; /* Tamaño del título */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.footer-section p, .footer-section a {
+  margin: 5px 0; /* Espaciado entre líneas */
+  color: #ffffff; /* Asegura que el texto sea visible */
+  text-decoration: none; /* Elimina subrayado de los enlaces */
+}
 #container strong {
   font-size: 20px;
   line-height: 26px;

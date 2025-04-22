@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="ffafcc">
+  <ion-toolbar>
     <ion-title slot="start">
       <strong class="graphia-title">Graphia</strong>
     </ion-title>
@@ -145,10 +145,10 @@
       <ion-card>
         <ion-card-content>
           <div class="opinion-header">
-            <img src="assets/javiera.png" alt="Javiera" class="profile-img">
+            <img src="assets/Javiera.png" alt="Javiera" class="profile-img">
           <div>
-            <strong>Javiera</strong>, Artista <br>
-          ⭐⭐⭐⭐⭐
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <strong>Javiera, Artista</strong> 
           </div>
         </div>
           <p class="opinion-text">Excelente catálogo y páginas amigables con la vista</p> 
@@ -162,8 +162,8 @@
           <div class="opinion-header">
             <img src="assets/ignacio.png" alt="Ignacio" class="profile-img">
           <div>
-            <strong>Ignacio</strong>, Estudiante <br>
-          ⭐⭐⭐⭐⭐
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <strong>Ignacio, Estudiante</strong>
           </div>
         </div>
           <p class="opinion-text">Mucha variedad de productos, buenas marcas y rápido envío. Súper recomendado.</p> 
@@ -177,8 +177,9 @@
           <div class="opinion-header">
             <img src="assets/magaly.png" alt="Magaly" class="profile-img">
           <div>
-            <strong>Magaly</strong>, Trabajadora <br>
-          ⭐⭐⭐⭐⭐
+            <div class="stars">⭐⭐⭐</div>
+            <strong>Magaly, Trabajadora</strong>
+          
           </div>
         </div>
           <p class="opinion-text">Muy bonita la página, pero no tienen herramientas.</p> 
@@ -189,19 +190,39 @@
     <swiper-slide>
       <ion-card>
         <ion-card-content>
-          ⭐⭐⭐ <br>
-          Bonita página, pero faltan calcetines.
+          <div class="opinion-header">
+            <img src="assets/sebastian.png" alt="Sebastian" class="profile-img">
+          <div>
+            <div class="stars">⭐⭐</div>
+            <strong>Sebastian, Estilista</strong>
+          </div>
+        </div>
+          <p class="opinion-text">No encontre elementos para el pelo</p> 
         </ion-card-content>
       </ion-card>
     </swiper-slide>
   </swiper-container>
 
-  <!--final de pagina-->
-  <div style="margin-top: 30px; text-align: center; font-size: 0.9em;">
-    <p>📞+56954119955 &nbsp; 📧 graphia&#64;gmail.com</p>
-    <p>📍 Región Metropolitana - Graphia</p>
-    <p>© 2025 Atención al cliente | Mi cuenta | Preguntas frecuentes | Devoluciones y reembolsos</p>
-  </div>
-</ion-content>
-
-<!-- alo -->
+  <!-- Footer -->
+  <ion-footer class="home-footer">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4" class="footer-section">
+          <h3>Contacto</h3>
+          <p>Email: contacto&#64;graphia.com</p>
+          <p>Teléfono: +56 9 1234 5678</p>
+        </ion-col>
+        <ion-col size="4" class="footer-section">
+          <h3>Redes Sociales</h3>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-col>
+        <ion-col size="4" class="footer-section">
+          <h3>Información</h3>
+          <p><a href="#">Términos y Condiciones</a></p>
+          <p><a href="#">Política de Privacidad</a></p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-footer>
