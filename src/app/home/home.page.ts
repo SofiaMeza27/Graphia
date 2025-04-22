@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -16,9 +17,17 @@ export class HomePage {
     loop: true, // Habilita el bucle infinito
   };
   
-  constructor() {}
+  constructor(private router: Router) {}
   onSearch(event: any) {
     const searchTerm = event.target.value;
     console.log('Buscando:', searchTerm);
   }
+
+  irARegistro() {
+  this.router.navigate(['/registro']);
+  }
 }
+
+
+
+

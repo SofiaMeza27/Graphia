@@ -1,0 +1,25 @@
+.rectangle {
+  width: 70%; // Ocupa el 70% del ancho de la página
+  height: 70%; // Ocupa el 70% del alto de la página
+  background-color: #FFB0CD; // Color de fondo del rectángulo
+  margin: auto; // Centra el rectángulo horizontalmente
+  position: absolute; // Posiciona el rectángulo
+  top: 15%; // Deja espacio en la parte superior
+  left: 15%; // Deja espacio en los lados
+  border-radius: 10px; // Bordes redondeados opcionales
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Sombra opcional
+  display: flex; // Flexbox para centrar el contenido
+  flex-direction: column; // Dirección de los elementos dentro del rectángulo
+  justify-content: flex-start; // Alinea el contenido en la parte superior
+  align-items: center; // Centra horizontalmente el contenido
+  padding: 0%; // Espacio interno
+
+  .rectangle-text {
+    font-size: 30px; // Tamaño del texto
+    font-weight: bold; // Negrita
+    color: #000000; // Color del texto
+    text-align: center; // Centrar el texto horizontalmente
+    margin-top: 10px; // Espacio superior opcional
+    font-family: 'Arial', sans-serif; // Fuente del texto
+  }
+}
