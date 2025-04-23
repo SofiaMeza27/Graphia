@@ -9,6 +9,8 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { register } from 'swiper/element/bundle';
 import { FooterComponent } from '../components/footer/footer.component'; // Importa el FooterComponent
+import { HeaderComponent } from '../components/header/header.component';
+
 
 register();
 
@@ -22,11 +24,13 @@ register();
   ],
   declarations: [
     HomePage,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
     FooterComponent,
+    HeaderComponent,
   ],
 })
 export class HomePageModule {}

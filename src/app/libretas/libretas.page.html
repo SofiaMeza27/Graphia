@@ -1,0 +1,44 @@
+<ion-content>
+  <app-header></app-header>
+
+  <div class="libretas-layout">
+    <!-- Filtro lateral -->
+    <aside class="filter-sidebar">
+      <h3>Categorías > Libretas</h3>
+      <div class="filter-section">
+        <div class="filter-item" *ngFor="let filter of filters">
+          <h4 (click)="toggleFilter(filter)">
+            <ion-icon [name]="filter.open ? 'remove' : 'add'"></ion-icon>
+            {{ filter.name }}
+          </h4>
+          <div class="filter-options" *ngIf="filter.open">
+            <p *ngFor="let option of filter.options">{{ option }}</p>
+          </div>
+        </div>
+        <div class="price-filter">
+          <h4>Precio</h4>
+          <div class="price-range">
+            <span>$10.000</span>
+            <input type="range" min="10000" max="30000" />
+            <span>$30.000</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Cuadrícula de productos -->
+    <main class="products-grid">
+      <div class="product-card" *ngFor="let product of products">
+        <img [src]="product.image" alt="{{ product.name }}" />
+        <h5>{{ product.name }}</h5>
+        <!-- Calificación -->
+        <div class="product-rating">
+          <ion-icon name="star" *ngFor="let star of [].constructor(product.rating)"></ion-icon>
+        </div>
+        <p>{{ product.price }}</p>
+      </div>
+    </main>
+  </div>
+
+  <app-footer></app-footer>
+</ion-content>

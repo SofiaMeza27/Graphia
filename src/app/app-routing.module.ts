@@ -15,6 +15,11 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'libretas',
+    loadChildren: () => import('./libretas/libretas.module').then( m => m.LibretasPageModule)
+  },
+
   
 
 
