@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RegistroPage } from './registro.page';
+import { Component } from '@angular/core';
 
 describe('RegistroPage', () => {
   let component: RegistroPage;

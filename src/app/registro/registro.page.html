@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>registro</ion-title>
+    <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">registro</ion-title>
+      <ion-title size="large">Registro</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -15,8 +15,64 @@
   <div class="rectangle">
     <!-- Texto dentro del rectángulo -->
     <h2 class="rectangle-text">Registro</h2>
+
+    <!-- Formulario de registro -->
+    <form>
+      <!-- Campo de Nombre -->
+      <ion-item>
+        <ion-label position="stacked">Nombre de Usuario</ion-label>
+        <ion-input type="text" placeholder="Ingresa tu nombre"></ion-input>
+      </ion-item>
+
+      <!-- Campo de Rut -->
+      <ion-item>
+        <ion-label position="stacked">Rut del usuario</ion-label>
+        <ion-input type="number" placeholder="Ingresa tu rut"></ion-input>
+      </ion-item>
+  
+      <!-- Campo de Correo Electrónico -->
+      <ion-item>
+        <ion-label position="stacked">Correo Electrónico</ion-label>
+        <ion-input type="email" placeholder="Ingresa tu correo"></ion-input>
+      </ion-item>
+
+      <!-- Campo de Región -->
+      <ion-item>
+        <ion-label position="stacked">Region del Usuario</ion-label>
+        <ion-input type="text" placeholder="Ingresa tu region"></ion-input>
+      </ion-item>
+
+      <!-- Campo de Comuna -->
+      <ion-item>
+        <ion-label position="stacked">Comuna del Usuario</ion-label>
+        <ion-input type="text" placeholder="Ingresa tu comuna"></ion-input>
+      </ion-item>
+  
+      <!-- Campo de Contraseña -->
+      <ion-item>
+        <ion-label position="stacked">Contraseña</ion-label>
+        <ion-input type="password" placeholder="Ingresa tu contraseña"></ion-input>
+      </ion-item>
+
+      <!-- Campo de Confirmar Contraseña -->
+      <ion-item>
+        <ion-label position="stacked">Confirmar Contraseña</ion-label>
+        <ion-input type="password" placeholder="Ingresa tu contraseña de nuevo"></ion-input>
+      </ion-item>
+
+      <!-- Texto previo al botón -->
+      <p style="text-align: center; font-size: 14px; font-family: Enriqueta; color: #3828B0; margin: 10px 0; text-decoration: underline;">
+        términos y condiciones.
+      </p>
+
+      <!-- Checkbox con texto -->
+      <ion-item lines="none" style="text-align: center;">
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label style="font-size: 10px; font-family: Enriqueta; color: #333;">Acepto que he leido los terminos y condiciones y estoy de acuerdo con ellos</ion-label>
+      </ion-item>
+
+      <!-- Botón de Registro -->
+      <ion-button expand="block" class="login-button" type="submit">Registrarse</ion-button>
+    </form>
   </div>
-
-  <h1 style="color: red; text-align: center;">¡Estás en la página de Registro!</h1>
 </ion-content>
-

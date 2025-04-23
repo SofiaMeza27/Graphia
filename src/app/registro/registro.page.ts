@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-registro',
   templateUrl: './registro.page.html',
   styleUrls: ['./registro.page.scss'],
-  standalone: true, // Indica que es un componente standalone
-  imports: [IonicModule, CommonModule, FormsModule] // Importar los módulos necesarios
+  standalone: false,
 })
 export class RegistroPage {}
