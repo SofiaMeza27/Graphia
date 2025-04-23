@@ -1,0 +1,65 @@
+<ion-header>
+  <!-- Contenedor para el título -->
+  <div class="header-container">
+    <!-- titulo -->
+    <div class="header-title">
+      <strong class="graphia-title">Graphia</strong>
+    </div>
+
+    <!-- barra de busque -->
+    <div class="header-searchbar">
+      <ion-searchbar placeholder="Buscar productos" (ionInput)="onSearch($event)"></ion-searchbar>
+    </div>
+
+    <!-- Contenedor para los botones del carrito y usuario -->
+    <div class="header-buttons">
+      <ion-button class="cart-button" fill="clear">
+        <ion-icon name="cart-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button class="user-button" fill="clear" routerLink="/login">
+        <ion-icon name="person-circle-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </div>
+
+  </div>
+  <!-- Segmento con categorías -->
+  <ion-toolbar>
+    <ion-segment value="inicio">
+      <ion-segment-button value="inicio">
+        <ion-label>Inicio</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="categorias">
+        <ion-label>Categorías</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="marcas">
+        <ion-label>Marcas</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="login-container">
+    <ion-icon name="person-circle-outline" class="login-icon"></ion-icon>
+    <h2 class="login-title">Inicio de Sesión</h2>
+
+    <!-- Campo de nombre de usuario o correo -->
+    <ion-item class="login-input">
+      <ion-input type="text" placeholder="Nombre de usuario o correo"></ion-input>
+    </ion-item>
+
+    <!-- Campo de contraseña -->
+    <ion-item class="login-input">
+      <ion-input type="password" placeholder="Contraseña"></ion-input>
+    </ion-item>
+
+    <!-- Botón de Login -->
+    <ion-button expand="block" class="login-button">Log in</ion-button>
+
+    <!-- Separador -->
+    <div class="separator">o</div>
+
+    <!-- Botón de Sign up -->
+    <ion-button expand="block" class="signup-button">Sign up</ion-button>
+  </div>
+</ion-content>

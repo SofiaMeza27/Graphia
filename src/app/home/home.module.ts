@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { register } from 'swiper/element/bundle';
+import { FooterComponent } from '../components/footer/footer.component'; // Importa el FooterComponent
 
 register();
 
@@ -19,7 +20,13 @@ register();
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  declarations: [
+    HomePage,
+    FooterComponent
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  exports: [
+    FooterComponent,
+  ],
 })
 export class HomePageModule {}

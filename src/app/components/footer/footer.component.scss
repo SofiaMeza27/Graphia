@@ -1,0 +1,45 @@
+.custom-footer {
+    
+    position: relative;
+    bottom: 0; /* Fija el footer en la parte inferior */
+    background-color: #ffafcc; /* Fondo rosa */
+    left: 0;
+    width: 100%;
+    color: #ffffff; /* Texto blanco */
+    padding: 24px 16px; /* Espaciado interno */
+    border-top: 1px solid #ddd; /* Línea superior */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    text-align: center; /* Alinea el texto a la izquierda */
+    font-family: 'Enriqueta'; /* Fuente personalizada */
+    margin-bottom: 80px;
+  }
+  
+  ion-grid {
+    width: 100%; /* Asegura que el grid ocupe todo el ancho */
+    max-width: none; /* Elimina cualquier límite de ancho */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina relleno */
+  }
+  
+  ion-col {
+    margin-bottom: 16px; /* Espaciado entre columnas */
+  }
+  
+  ion-col p {
+    margin: 4px 0; /* Espaciado entre líneas */
+    font-size: 18px; /* Tamaño del texto */
+  }
+  
+  ion-col strong {
+    font-size: 20px; /* Tamaño del texto del título */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 8px; /* Espaciado inferior */
+    display: block; /* Asegura que el título esté en su propia línea */
+    font-family: 'Enriqueta'; /* Fuente personalizada */
+  }
+  
+  ion-icon {
+    margin-right: 8px; /* Espaciado entre el ícono y el texto */
+    vertical-align: middle; /* Alinea el ícono con el texto */
+    color: #ffffff; /* Color blanco */
+  }

@@ -1,15 +1,27 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title slot="start">
+  <!-- Contenedor para el título -->
+  <div class="header-container">
+    <!-- titulo -->
+    <div class="header-title">
       <strong class="graphia-title">Graphia</strong>
-    </ion-title>
-    <ion-searchbar placeholder="Buscar productos" (ionInput)="onSearch($event)" class="centered-searchbara"></ion-searchbar>
-    <ion-buttons slot="end">
-      <ion-icon name="cart-outline" slot="icon-only"></ion-icon>
-      <ion-icon name="person-circle-outline" slot="icon-only"></ion-icon>
-    </ion-buttons>
-  </ion-toolbar>
+    </div>
 
+    <!-- barra de busque -->
+    <div class="header-searchbar">
+      <ion-searchbar placeholder="Buscar productos" (ionInput)="onSearch($event)"></ion-searchbar>
+    </div>
+
+    <!-- Contenedor para los botones del carrito y usuario -->
+    <div class="header-buttons">
+      <ion-button class="cart-button" fill="clear">
+        <ion-icon name="cart-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button class="user-button" fill="clear" routerLink="/login">
+        <ion-icon name="person-circle-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </div>
+
+  </div>
   <!-- Segmento con categorías -->
   <ion-toolbar>
     <ion-segment value="inicio">
@@ -26,7 +38,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content >
   
   <!-- Banner oferta sillas -->
   <ion-img src="assets/descuento-sillas.png" class="banner-img">
@@ -203,26 +215,9 @@
     </swiper-slide>
   </swiper-container>
 
-  <!-- Footer -->
-  <ion-footer class="home-footer">
-    <ion-grid>
-      <ion-row>
-        <ion-col size="4" class="footer-section">
-          <h3>Contacto</h3>
-          <p>Email: contacto&#64;graphia.com</p>
-          <p>Teléfono: +56 9 1234 5678</p>
-        </ion-col>
-        <ion-col size="4" class="footer-section">
-          <h3>Redes Sociales</h3>
-          <ion-icon name="logo-facebook"></ion-icon>
-          <ion-icon name="logo-instagram"></ion-icon>
-          <ion-icon name="logo-twitter"></ion-icon>
-        </ion-col>
-        <ion-col size="4" class="footer-section">
-          <h3>Información</h3>
-          <p><a href="#">Términos y Condiciones</a></p>
-          <p><a href="#">Política de Privacidad</a></p>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-footer>
+  <app-footer></app-footer>
+
+</ion-content>
+
+  
+
