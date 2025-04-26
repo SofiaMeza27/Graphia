@@ -64,3 +64,6 @@ Requerimientos no funcionales:
 7) Disponibilidad
     La aplicación debe estar disponible y operativa al menos el 99% del tiempo, garantizando que los usuarios
     puedan acceder a sus funcionalidades en cualquier momento del día.
+   
+Figma:
+https://www.figma.com/design/HuzTydnZYpsx3NtLAiRpex/ProyectoWeb-Graphia?node-id=65-154&t=B6Vy0OJCK9mfrt2X-0
