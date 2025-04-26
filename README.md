@@ -67,3 +67,5 @@ Requerimientos no funcionales:
    
 Figma:
 https://www.figma.com/design/HuzTydnZYpsx3NtLAiRpex/ProyectoWeb-Graphia?node-id=65-154&t=B6Vy0OJCK9mfrt2X-0
+
+En el figma se encuentra un diagrama visual de la experiencia del usuario
