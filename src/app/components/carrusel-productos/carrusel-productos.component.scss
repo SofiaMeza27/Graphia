@@ -1,0 +1,41 @@
+swiper-container {
+    width: 100%; /* Asegura que el carrusel ocupe todo el ancho */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+  
+  swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  ion-card {
+    width: 85%; /* Ajusta el ancho de las tarjetas */
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un diseño limpio */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .custom-swiper {
+    background-color: #31CDC2; /* Color de fondo del carrusel */
+    padding: 20px 0px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .swiper-slide {
+    display: flex; /* Asegura que cada slide ocupe el mismo espacio */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    --color: #000000; /* Color de las flechas */
+    font-size: 20px; /* Tamaño de las flechas */
+    font-weight: bold; /* Negrita para las flechas */
+  }
+  
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    content: '';
+  }

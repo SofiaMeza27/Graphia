@@ -4,12 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LibretasPageRoutingModule } from './libretas-routing.module';
+import { CalificacionPageRoutingModule } from './calificacion-routing.module';
 
-import { LibretasPage } from './libretas.page';
-
-
-import { HomePageModule } from '../home/home.module';
+import { CalificacionPage } from './calificacion.page';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
@@ -17,14 +14,13 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    LibretasPageRoutingModule,
-    HomePageModule,
+    CalificacionPageRoutingModule,
     SharedModule
   ],
   declarations: [
-    LibretasPage,
+    CalificacionPage,
   ],
 })
-export class LibretasPageModule {}
+export class CalificacionPageModule {}
 
 

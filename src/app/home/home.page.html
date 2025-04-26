@@ -11,39 +11,9 @@
   <div class="linea-separadora"></div>
 
   <!-- Carrusel de productos con Swiper -->
-  <swiper-container [slidesPerView]="3" [spaceBetween]="10" [navigation]="true" [pagination]="false" class="custom-swiper">
-    <swiper-slide>
-      <ion-card>
-        <ion-img src="https://placehold.co/300x200?text=Producto+1"></ion-img>
-      </ion-card>
-    </swiper-slide>
-    <swiper-slide>
-      <ion-card>
-        <ion-img src="https://placehold.co/300x200?text=Producto+2"></ion-img>
-      </ion-card>
-    </swiper-slide>
-    <swiper-slide>
-      <ion-card>
-        <ion-img src="https://placehold.co/300x200?text=Producto+3"></ion-img>
-      </ion-card>
-    </swiper-slide>
-    <swiper-slide>
-      <ion-card>
-        <ion-img src="https://placehold.co/300x200?text=Producto+4"></ion-img>
-      </ion-card>
-    </swiper-slide>
-    <swiper-slide>
-      <ion-card>
-        <ion-img src="https://placehold.co/300x200?text=Producto+5"></ion-img>
-      </ion-card>
-    </swiper-slide>
-    <swiper-slide>
-      <ion-card>
-        <ion-img src="https://placehold.co/300x200?text=Producto+6"></ion-img>
-      </ion-card>
-    </swiper-slide>
-  </swiper-container>
+  <app-carrusel-productos></app-carrusel-productos>
 
+  
 
   <!--linea para separar-->
   <div class="linea-separadora"></div>
@@ -114,68 +84,8 @@
   <div class="linea-separadora"></div>
 
   <!-- Opiniones con Swiper -->
-  <swiper-container [slidesPerView]="3" [spaceBetween]="10" [navigation]="true" [pagination]="false" class="custom-opinion-swiper">
-    <swiper-slide>
-      <ion-card>
-        <ion-card-content>
-          <div class="opinion-header">
-            <img src="assets/Javiera.png" alt="Javiera" class="profile-img">
-          <div>
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <strong>Javiera, Artista</strong> 
-          </div>
-        </div>
-          <p class="opinion-text">Excelente catálogo y páginas amigables con la vista</p> 
-        </ion-card-content>
-      </ion-card>
-    </swiper-slide>
-
-    <swiper-slide>
-      <ion-card>
-        <ion-card-content>
-          <div class="opinion-header">
-            <img src="assets/ignacio.png" alt="Ignacio" class="profile-img">
-          <div>
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <strong>Ignacio, Estudiante</strong>
-          </div>
-        </div>
-          <p class="opinion-text">Mucha variedad de productos, buenas marcas y rápido envío. Súper recomendado.</p> 
-        </ion-card-content>
-      </ion-card>
-    </swiper-slide>
-
-    <swiper-slide>
-      <ion-card>
-        <ion-card-content>
-          <div class="opinion-header">
-            <img src="assets/magaly.png" alt="Magaly" class="profile-img">
-          <div>
-            <div class="stars">⭐⭐⭐</div>
-            <strong>Magaly, Trabajadora</strong>
-          
-          </div>
-        </div>
-          <p class="opinion-text">Muy bonita la página, pero no tienen herramientas.</p> 
-        </ion-card-content>
-      </ion-card>
-    </swiper-slide>
-    
-    <swiper-slide>
-      <ion-card>
-        <ion-card-content>
-          <div class="opinion-header">
-            <img src="assets/sebastian.png" alt="Sebastian" class="profile-img">
-          <div>
-            <div class="stars">⭐⭐</div>
-            <strong>Sebastian, Estilista</strong>
-          </div>
-        </div>
-          <p class="opinion-text">No encontre elementos para el pelo</p> 
-        </ion-card-content>
-      </ion-card>
-    </swiper-slide>
-  </swiper-container>
+  
+  <app-carrusel-reviews></app-carrusel-reviews>
 
   <app-footer></app-footer>
 

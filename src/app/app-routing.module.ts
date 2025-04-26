@@ -19,6 +19,18 @@ const routes: Routes = [
     path: 'libretas',
     loadChildren: () => import('./libretas/libretas.module').then( m => m.LibretasPageModule)
   },
+  {
+    path: 'calificacion',
+    loadChildren: () => import('./calificacion/calificacion.module').then( m => m.CalificacionPageModule)
+  },
+  {
+    path: 'calificaciones',
+    loadChildren: () =>
+      import('./calificacion/calificacion.module').then(
+        (m) => m.CalificacionPageModule
+      ),
+  },
+
 
   
 
