@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<ion-content>
+  <div class="calificaciones-container">
+    <h2>Califica nuestro sitio</h2>
+
+    <!-- Sección de calificación -->
+    <div class="calificacion-box">
+      <div class="calificacion-item">
+        <label for="ocupacion">¿A qué te dedicas?</label>
+        <input id="ocupacion" type="text" placeholder="Escribe aquí..." />
+      </div>
+
+      <div class="calificacion-item">
+        <h3>¡Valóranos!</h3>
+        <div class="rating">
+          <ion-icon
+            name="star"
+            *ngFor="let star of [].constructor(5); let i = index"
+            [class.filled]="i < rating"
+            (click)="setRating(i + 1)"
+          ></ion-icon>
+        </div>
+        <textarea placeholder="Comenta qué te parece nuestro servicio"></textarea>
+      </div>
+    </div>
+
+    <!-- Botón de enviar -->
+    <ion-button expand="block" (click)="submitFeedback()">Enviar</ion-button>
+  </div>
+
+  <app-footer></app-footer>
+</ion-content>

@@ -1,0 +1,73 @@
+.custom-opinion-swiper {
+    background-color: #31CDC2; /* Color de fondo del carrusel */
+    padding: 20px 5px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  
+  .custom-opinion-swiper .swiper-slide {
+    display: flex; /* Asegura que cada slide ocupe el mismo espacio */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+  }
+  
+  .custom-opinion-swiper ion-card {
+    width: 85%; /* Ajusta el ancho de las tarjetas */
+    height: auto; /* Ajusta la altura automáticamente */
+    background-color: #F0F0F0; /* Color de fondo blanco para las tarjetas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un diseño limpio */
+    border-radius: 10px; /* Bordes redondeados */
+    
+  }
+  
+  .custom-opinion-swiper .swiper-button-next,
+  .custom-opinion-swiper .swiper-button-prev {
+    color: #ffffff;/* Color de las flechas */
+    font-size: 5px; /* Tamaño de las flechas */
+    
+  }
+  
+  .custom-opinion-swiper .swiper-button-next::after,
+  .custom-opinion-swiper .swiper-button-prev::after {
+    content: '';
+  }
+  
+  .opinion-header {
+    display: flex; /* Crea un contenedor flexible */
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 10px; /* Espaciado entre el avatar y el contenido */
+  }
+  
+  .opinion-header img {
+    width: 50px; /* Tamaño del avatar */
+    height: 50px;
+    border-radius: 50%; /* Hace que el avatar sea circular */
+  }
+  
+  .opinion-header div {
+    display: flex;
+    flex-direction: column; /* Coloca el contenido (estrellas, nombre, ocupación) en columna */
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+  }
+  
+  .opinion-header strong {
+    font-family: 'Enriqueta';
+    font-size: 14px; /* Tamaño del nombre */
+    font-weight: bold; /* Negrita para el nombre */
+  }
+  
+  .opinion-text {
+    font-family: 'Enriqueta';
+    font-size: 18px; /* Tamaño del texto de la reseña */
+    text-align: center; /* Centra el texto de la reseña */
+    margin-top: 10px; /* Espaciado superior */
+    
+    color: #333; /* Color del texto */
+  }
+  
+  .opinion-header .stars {
+    font-size: 14px; /* Tamaño de las estrellas */
+    color: #ffd700; /* Color dorado para las estrellas */
+  }
+  

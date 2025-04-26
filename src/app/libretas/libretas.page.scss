@@ -1,0 +1,129 @@
+
+.libretas-layout {
+    display: flex; /* Coloca los elementos en una fila */
+    flex-direction: row; /* Asegura que estén en fila */
+    gap: 16px; /* Espaciado entre el filtro y los productos */
+    padding: 16px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+  }
+  
+  .filter-sidebar {
+    width: 20%;
+    padding: 16px;
+    background-color: #ffe4ec;
+    border-radius: 8px;
+    margin-right: 16px;
+    
+  }
+  
+  .filter-sidebar h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    font-family: 'Enriqueta';
+    font-weight: bold;
+  }
+  
+  .filter-item h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 8px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Enriqueta';
+  }
+  
+  .filter-item h4 ion-icon {
+    font-size: 16px;
+    margin-right: 8px;
+    
+    
+  }
+  
+  .filter-options {
+    margin-left: 16px;
+    font-size: 16px;
+    color: #555;
+    font-family: 'Enriqueta';
+  }
+  
+  .price-filter {
+    margin-top: 16px;
+    font-family: 'Enriqueta';
+    font-size: 18px;
+    font-weight: bold;
+    
+  }
+  
+  .price-range {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-top: 8px;
+    font-family: 'Enriqueta';
+    
+  }
+  
+  .price-range input[type='range'] {
+    flex: 1;
+    margin: 0 8px;
+    
+  }
+
+/* Cuadrícula de productos */
+.products-grid {
+display: grid;
+grid-template-columns: repeat(3, 300px); /* 3 columnas de igual ancho */
+gap: 130px; /* Espaciado entre los elementos */
+width: 100%; /* Asegura que ocupe todo el ancho disponible */
+padding: 16px; /* Espaciado interno */
+box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+//calificacion
+
+.product-rating {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0; /* Espaciado entre el nombre y la calificación */
+    color: #31CDC2; /* Color dorado para las estrellas */
+  }
+  
+  .product-rating ion-icon {
+    font-size: 18px; /* Tamaño de las estrellas */
+    margin-right: 4px; /* Espaciado entre las estrellas */
+  }
+
+.product-card {
+background-color: #F0F0F0;
+border: 1px solid #ddd;
+border-radius: 8px;
+padding: 16px;
+text-align: center;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+height: 400px;
+width: 320px;
+}
+
+.product-card img {
+width: 60%;
+height: auto;
+border-radius: 8px;
+margin-bottom: 20px;
+}
+//titulo imagen
+.product-card h5 {
+font-size: 20px;
+font-weight: bold;
+margin: 8px 0;
+font-family: 'Enriqueta';
+}
+//precio
+.product-card p {
+font-size: 18px;
+color: #555;
+font-family: 'Enriqueta';
+}

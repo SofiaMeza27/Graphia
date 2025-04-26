@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -17,8 +19,11 @@ export class HomePage {
   };
   
   constructor() {}
+
+  
   onSearch(event: any) {
     const searchTerm = event.target.value;
     console.log('Buscando:', searchTerm);
   }
 }
+

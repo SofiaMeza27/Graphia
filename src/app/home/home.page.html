@@ -1,32 +1,6 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="ffafcc">
-    <ion-title slot="start">
-      <strong class="graphia-title">Graphia</strong>
-    </ion-title>
-    <ion-searchbar placeholder="Buscar productos" (ionInput)="onSearch($event)" class="centered-searchbara"></ion-searchbar>
-    <ion-buttons slot="end">
-      <ion-icon name="cart-outline" slot="icon-only"></ion-icon>
-      <ion-icon name="person-circle-outline" slot="icon-only"></ion-icon>
-    </ion-buttons>
-  </ion-toolbar>
 
-  <!-- Segmento con categorías -->
-  <ion-toolbar>
-    <ion-segment value="inicio">
-      <ion-segment-button value="inicio">
-        <ion-label>Inicio</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="categorias">
-        <ion-label>Categorías</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="marcas">
-        <ion-label>Marcas</ion-label>
-      </ion-segment-button>
-    </ion-segment>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content class="ion-padding">
+<app-header></app-header>
+<ion-content >
   
   <!-- Banner oferta sillas -->
   <ion-img src="assets/descuento-sillas.png" class="banner-img">
@@ -37,39 +11,9 @@
   <div class="linea-separadora"></div>
 
   <!-- Carrusel de productos con Swiper -->
-  <swiper-container [slidesPerView]="3" [spaceBetween]="10" [navigation]="true" [pagination]="false" class="custom-swiper">
-    <swiper-slide>
-      <ion-card>
-        <ion-img src="https://placehold.co/300x200?text=Producto+1"></ion-img>
-      </ion-card>
-    </swiper-slide>
-    <swiper-slide>
-      <ion-card>
-        <ion-img src="https://placehold.co/300x200?text=Producto+2"></ion-img>
-      </ion-card>
-    </swiper-slide>
-    <swiper-slide>
-      <ion-card>
-        <ion-img src="https://placehold.co/300x200?text=Producto+3"></ion-img>
-      </ion-card>
-    </swiper-slide>
-    <swiper-slide>
-      <ion-card>
-        <ion-img src="https://placehold.co/300x200?text=Producto+4"></ion-img>
-      </ion-card>
-    </swiper-slide>
-    <swiper-slide>
-      <ion-card>
-        <ion-img src="https://placehold.co/300x200?text=Producto+5"></ion-img>
-      </ion-card>
-    </swiper-slide>
-    <swiper-slide>
-      <ion-card>
-        <ion-img src="https://placehold.co/300x200?text=Producto+6"></ion-img>
-      </ion-card>
-    </swiper-slide>
-  </swiper-container>
+  <app-carrusel-productos></app-carrusel-productos>
 
+  
 
   <!--linea para separar-->
   <div class="linea-separadora"></div>
@@ -140,68 +84,12 @@
   <div class="linea-separadora"></div>
 
   <!-- Opiniones con Swiper -->
-  <swiper-container [slidesPerView]="3" [spaceBetween]="10" [navigation]="true" [pagination]="false" class="custom-opinion-swiper">
-    <swiper-slide>
-      <ion-card>
-        <ion-card-content>
-          <div class="opinion-header">
-            <img src="assets/javiera.png" alt="Javiera" class="profile-img">
-          <div>
-            <strong>Javiera</strong>, Artista <br>
-          ⭐⭐⭐⭐⭐
-          </div>
-        </div>
-          <p class="opinion-text">Excelente catálogo y páginas amigables con la vista</p> 
-        </ion-card-content>
-      </ion-card>
-    </swiper-slide>
+  
+  <app-carrusel-reviews></app-carrusel-reviews>
 
-    <swiper-slide>
-      <ion-card>
-        <ion-card-content>
-          <div class="opinion-header">
-            <img src="assets/ignacio.png" alt="Ignacio" class="profile-img">
-          <div>
-            <strong>Ignacio</strong>, Estudiante <br>
-          ⭐⭐⭐⭐⭐
-          </div>
-        </div>
-          <p class="opinion-text">Mucha variedad de productos, buenas marcas y rápido envío. Súper recomendado.</p> 
-        </ion-card-content>
-      </ion-card>
-    </swiper-slide>
+  <app-footer></app-footer>
 
-    <swiper-slide>
-      <ion-card>
-        <ion-card-content>
-          <div class="opinion-header">
-            <img src="assets/magaly.png" alt="Magaly" class="profile-img">
-          <div>
-            <strong>Magaly</strong>, Trabajadora <br>
-          ⭐⭐⭐⭐⭐
-          </div>
-        </div>
-          <p class="opinion-text">Muy bonita la página, pero no tienen herramientas.</p> 
-        </ion-card-content>
-      </ion-card>
-    </swiper-slide>
-    
-    <swiper-slide>
-      <ion-card>
-        <ion-card-content>
-          ⭐⭐⭐ <br>
-          Bonita página, pero faltan calcetines.
-        </ion-card-content>
-      </ion-card>
-    </swiper-slide>
-  </swiper-container>
-
-  <!--final de pagina-->
-  <div style="margin-top: 30px; text-align: center; font-size: 0.9em;">
-    <p>📞+56954119955 &nbsp; 📧 graphia&#64;gmail.com</p>
-    <p>📍 Región Metropolitana - Graphia</p>
-    <p>© 2025 Atención al cliente | Mi cuenta | Preguntas frecuentes | Devoluciones y reembolsos</p>
-  </div>
 </ion-content>
 
-<!-- alo -->
+  
+
