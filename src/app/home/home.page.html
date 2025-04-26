@@ -1,6 +1,6 @@
 
 <app-header></app-header>
-<ion-content >
+<ion-content [fullscreen]="true">
   
   <!-- Banner oferta sillas -->
   <ion-img src="assets/descuento-sillas.png" class="banner-img">
@@ -80,16 +80,23 @@
     </ion-row>
   </ion-grid>
   
+
+  <ion-button class="calificacion-button" fill="clear" routerLink="/calificacion">Calificanos!</ion-button>
   <!--linea para separar-->
   <div class="linea-separadora"></div>
-
+ 
   <!-- Opiniones con Swiper -->
   
   <app-carrusel-reviews></app-carrusel-reviews>
 
+  
+  
   <app-footer></app-footer>
+  
 
 </ion-content>
+
+
 
   
 
