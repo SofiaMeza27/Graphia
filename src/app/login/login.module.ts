@@ -8,7 +8,7 @@ import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
 import { SharedModule } from '../shared/shared.module';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -17,7 +17,7 @@ import { RouterLink } from '@angular/router';
     IonicModule,
     LoginPageRoutingModule,
     SharedModule,
-    RouterLink
+    RouterModule
   ],
   declarations: [
     LoginPage,
