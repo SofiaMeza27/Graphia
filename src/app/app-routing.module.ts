@@ -23,13 +23,16 @@ const routes: Routes = [
     path: 'calificacion',
     loadChildren: () => import('./calificacion/calificacion.module').then( m => m.CalificacionPageModule)
   },
+  
   {
-    path: 'calificaciones',
-    loadChildren: () =>
-      import('./calificacion/calificacion.module').then(
-        (m) => m.CalificacionPageModule
-      ),
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
   },
+
+
 
 
   
