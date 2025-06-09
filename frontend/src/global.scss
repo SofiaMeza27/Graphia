@@ -1,0 +1,84 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+ 
+/* Estilos básicos de Swiper (requeridos) */
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+
+
+
+// Estilos base para un toast personalizado general
+ion-toast.custom-toast {
+  --background: #ffafcc !important; // Tu rosado claro original
+  --color: #3828B0 !important;      // Tu azul morado original
+  border-radius: 18px !important;
+  font-family: 'Enriqueta', serif;
+  font-size: 1.1rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(31, 38, 135, 0.15);
+  // Añadido para elevar el toast y evitar que se pierda en el footer
+  --offset-bottom: 80px !important; // Eleva el toast 80px desde el borde inferior
+}
+
+// Estilos específicos para un toast de ERROR
+ion-toast.error-toast {
+  --background: #8B0000 !important; // Rojo oscuro
+  --color: #FFFFFF !important;     // Texto blanco
+  font-weight: bold !important;
+  border: 1px solid #6b0000 !important; // Borde para mayor definición
+  box-shadow: 0 4px 16px rgba(139, 0, 0, 0.3) !important; // Sombra más pronunciada
+  // Añadido para elevar el toast de error
+  --offset-bottom: 80px !important; // Eleva el toast 80px desde el borde inferior
+}
+
+// Estilos específicos para un toast de ÉXITO
+ion-toast.success-toast {
+  --background: #4CAF50 !important; // Un verde para el éxito
+  --color: #FFFFFF !important;     // Texto blanco
+  font-weight: bold !important;
+  border: 1px solid #388E3C !important; // Borde verde oscuro
+  box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3) !important;
+  // Añadido para elevar el toast de éxito
+  --offset-bottom: 80px !important; // Eleva el toast 80px desde el borde inferior
+}
+
+// Puedes añadir más estilos para otros tipos si los necesitas
+// ion-toast.info-toast { ... }
+// ion-toast.warning-toast { ... }

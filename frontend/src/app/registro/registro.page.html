@@ -1,0 +1,74 @@
+<app-header> </app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Registro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="rectangle">
+    <ion-icon name="person-add-outline" class="icono-registro"></ion-icon>
+    <h2 class="rectangle-text">Registro</h2>
+
+    <form (ngSubmit)="register()">
+      <ion-item>
+        <ion-label position="stacked">Nombre de Usuario</ion-label>
+        <ion-input type="text" placeholder="Ingresa tu nombre" [(ngModel)]="username" name="username" required></ion-input>
+      </ion-item>
+      <div *ngIf="errores.username" class="input-error">{{ errores.username }}</div>
+
+      <ion-item>
+        <ion-label position="stacked">Rut del usuario (Sin puntos y con guión)</ion-label>
+        <ion-input
+          type="text" placeholder="Ingresa tu rut (12345678-9)" [(ngModel)]="rut" name="rut"></ion-input>
+      </ion-item>
+      <div *ngIf="errores.rut" class="input-error">{{ errores.rut }}</div>
+
+      <ion-item>
+        <ion-label position="stacked">Correo Electrónico</ion-label>
+        <ion-input type="email" placeholder="Ingresa correo Electrónico" [(ngModel)]="email" name="email"></ion-input>
+      </ion-item>
+      <div *ngIf="errores.email" class="input-error">{{ errores.email }}</div>
+
+      <ion-item>
+        <ion-label position="stacked">Region del Usuario</ion-label>
+        <ion-input type="text" placeholder="Ingresa tu region" [(ngModel)]="region" name="region"></ion-input>
+      </ion-item>
+      <div *ngIf="errores.region" class="input-error">{{ errores.region }}</div>
+
+      <ion-item>
+        <ion-label position="stacked">Comuna del Usuario</ion-label>
+        <ion-input type="text" placeholder="Ingresa tu comuna" [(ngModel)]="comuna" name="comuna"></ion-input>
+      </ion-item>
+      <div *ngIf="errores.comuna" class="input-error">{{ errores.comuna }}</div>
+
+      <ion-item>
+        <ion-label position="stacked">Contraseña</ion-label>
+        <ion-input type="password" placeholder="Ingresa tu contraseña" [(ngModel)]="password" name="password" required></ion-input>
+      </ion-item>
+      <div *ngIf="errores.password" class="input-error">{{ errores.password }}</div>
+
+      <ion-item>
+        <ion-label position="stacked">Confirmar Contraseña</ion-label>
+        <ion-input type="password" placeholder="Ingresa tu contraseña de nuevo" [(ngModel)]="confirmPassword" name="confirmPassword" required></ion-input>
+      </ion-item>
+      <div *ngIf="errores.confirmPassword" class="input-error">{{ errores.confirmPassword }}</div>
+
+      <p style="text-align: center; font-size: 14px; font-family: Enriqueta; color: #3828B0; margin: 10px 0; text-decoration: underline;" >
+        Ver términos y condiciones.
+      </p>
+
+      <ion-item lines="none" style="text-align: center;">
+        <ion-checkbox slot="start" [(ngModel)]="aceptaTerminos" name="aceptaTerminos"></ion-checkbox>
+        <ion-label style="font-size: 10px; font-family: Enriqueta; color: #333;">Acepto que he leido los terminos y condiciones y estoy de acuerdo con ellos</ion-label>
+      </ion-item>
+
+      <ion-button expand="block" class="login-button" type="submit" [disabled]="!aceptaTerminos">Registrarse</ion-button>
+    </form>
+
+    <div *ngIf="mensaje">{{ mensaje }}</div>
+  </div>
+
+  <app-footer></app-footer>
+</ion-content>

@@ -1,0 +1,67 @@
+<app-header></app-header>
+
+<ion-content>
+  <div class="productos-filtros">
+    <ion-item lines="none">
+      <ion-label>Tipo</ion-label>
+      <ion-select [(ngModel)]="filtroTipo" placeholder="Todos">
+        <ion-select-option value="">Todos</ion-select-option>
+        <ion-select-option value="Cuaderno">Cuadernos</ion-select-option>
+        <ion-select-option value="Lápiz">Lápices</ion-select-option>
+        <ion-select-option value="Resaltador">Resaltadores</ion-select-option>
+        <ion-select-option value="Regla">Reglas</ion-select-option>
+        <ion-select-option value="Tijeras">Tijeras</ion-select-option>
+        <ion-select-option value="Corrector">Correctores</ion-select-option>
+        <ion-select-option value="Notas">Notas adhesivas</ion-select-option>
+        <ion-select-option value="Bolígrafo">Bolígrafos</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Precio máximo</ion-label>
+      <ion-input type="text" pattern="[0-9]*" inputmode="numeric" [(ngModel)]="filtroPrecio" placeholder="Sin límite"
+        maxlength="7"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Rating mínimo</ion-label>
+      <ion-select [(ngModel)]="filtroRating" placeholder="Todos">
+        <ion-select-option value="">Todos</ion-select-option>
+        <ion-select-option *ngFor="let r of [5,4,3,2,1]" [value]="r">{{r}} estrellas</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div class="filtros-botones">
+      <button class="filtro-btn" (click)="aplicarFiltros()">Filtrar</button>
+      <button class="limpiar-btn" (click)="limpiarFiltros()">Limpiar</button>
+    </div>
+  </div>
+
+  <div class="productos-grid">
+    <ion-card class="producto-card" *ngFor="let producto of productosFiltrados" (click)="verDetalle(producto)">
+      <img [src]="producto.imagen" alt="Imagen producto" class="producto-img" />
+      <ion-card-header>
+        <ion-card-title>{{ producto.nombre }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="producto-desc">{{ producto.descripcion }}</div>
+        <div class="producto-precio">${{ producto.precio | number:'1.0-0' }}</div>
+        <div class="producto-rating">
+          <ng-container *ngFor="let star of [1,2,3,4,5]">
+            <ion-icon name="star" [style.color]="star <= (producto.rating || 4) ? '#FFD700' : '#ccc'">
+            </ion-icon>
+          </ng-container>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="paginacion" *ngIf="totalPaginas > 1">
+    <button class="pagina-circulo" (click)="cambiarPagina(-1)" [disabled]="paginaActual === 1">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+    </button>
+    <span class="pagina-info">Página {{paginaActual}} de {{totalPaginas}}</span>
+    <button class="pagina-circulo" (click)="cambiarPagina(1)" [disabled]="paginaActual === totalPaginas">
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </button>
+  </div>
+  <br>
+  <app-footer></app-footer>
+</ion-content>

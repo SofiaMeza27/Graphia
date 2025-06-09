@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <!-- Contenedor para el título -->
+  <div class="header-container">
+    <!-- titulo -->
+    <div class="header-title">
+      <img src="assets/graphia_logo.png" alt="Logo Graphia" class="logo-navbar" routerLink="/home" />
+      <!-- <strong class="graphia-title" routerLink="/home">Graphia</strong>  -->
+    </div>
+
+    <!-- barra de busque -->
+    <div class="header-searchbar">
+      <ion-searchbar placeholder="Buscar productos" (ionInput)="onSearch($event)"></ion-searchbar>
+    </div>
+
+    <!-- Contenedor para los botones del carrito y usuario -->
+    <div class="header-buttons">
+      <ion-button class="cart-button" fill="clear">
+        <ion-icon name="cart-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+      <!-- Icono de login si NO está logueado -->
+      <ion-button class="user-button" *ngIf="!auth.isLoggedIn()" routerLink="/login" fill="clear">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-button>
+
+      <!-- Icono de perfil y menú si está logueado -->
+      <ion-button class="user-button" *ngIf="auth.isLoggedIn()" routerLink="/perfil" fill="clear">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button class="logout-button" *ngIf="auth.isLoggedIn()" (click)="logout()" fill="clear">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </div>
+
+  </div>
+  <!-- Segmento con categorías -->
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="segmentValue">
+      <ion-segment-button value="home" routerLink="/home">
+        <ion-label>INICIO</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="productos" routerLink="/productos">
+        <ion-label>PRODUCTOS</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="marcas" routerLink="/marcas">
+        <ion-label>MARCAS</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;700&display=swap');
+
+ion-content {
+  --background: #ffe0ef;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rectangle {
+  max-width: 430px;
+  margin: 40px auto;
+  background-color:#ffafcc;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .icono-registro {
+    font-size: 3.5rem;
+    color: #f8bbd0;
+    background: #fff;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  .rectangle-text {
+    font-family: 'Enriqueta', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  form {
+    width: 100%;
+  }
+  
+  ion-item {
+    --background: #fff;
+    --border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 18px;
+    box-shadow: none;
+    padding: 0 8px;
+
+  }
+  
+  ion-label {
+    font-weight: 600;
+    color: #000;
+    font-size: 1.1rem;
+    font-family: 'Enriqueta', serif;
+  }
+  
+  ion-input {
+    font-size: 1rem;
+    color: #333;
+    font-family: 'Enriqueta', serif;
+  }
+
+/* Botón de Registrarse */
+.login-button {
+  --background: #31CDC2; /* Fondo turquesa */
+  --border-radius: 20px; /* Bordes redondeados */
+  font-size: 18px;
+  font-family: "Enriqueta";
+}
+
+/* Botón de Sign up (si lo tienes en registro) */
+.signup-button {
+  --background: #31CDC2;
+  --border-radius: 20px;
+  font-size: 18px;
+  font-family: "Enriqueta";
+}
+
+  ion-button.login-button:active,
+  ion-button.signup-button:active {
+    filter: brightness(0.95);
+  }
+
+  .separator {
+    text-align: center;
+    margin: 18px 0 0 0;
+    color: #888;
+    font-size: 1.2rem;
+  }
+}
+
+.input-error {
+  color: #8B0000;
+  font-size: 0.95em;
+  margin: 2px 0 10px 8px;
+  font-family: 'Enriqueta', serif;
+}
+
+@media (max-width: 500px) {
+  .rectangle {
+    max-width: 95vw;
+    padding: 18px 4vw;
+  }
+  .rectangle-text {
+    font-size: 2rem;
+  }
+}
