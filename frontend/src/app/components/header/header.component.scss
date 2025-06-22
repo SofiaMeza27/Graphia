@@ -10,6 +10,7 @@ ion-segment {
   /* Contenedor principal para el título, barra de búsqueda y botones */
   .header-container {
     display: flex; /* Activa Flexbox */
+    flex-wrap: wrap;
     align-items: center; /* Alinea verticalmente los elementos */
     justify-content: space-between; /* Espacia los elementos horizontalmente */
     padding: 10px 15px; /* Espaciado interno */
@@ -29,6 +30,7 @@ ion-segment {
   }
   
   .graphia-title {
+    pointer-events: auto !important;
     font-family: 'Enriqueta';
     font-size: 30px;
     font-weight: bold;
@@ -37,10 +39,9 @@ ion-segment {
   
   /* Contenedor de la barra de búsqueda */
   .header-searchbar {
-    flex-grow: 1;
     margin: 10px auto;
-    max-width: 700px; 
-    margin: 0 20px;
+    max-width: 500px; 
+    margin: 0 50px;
   }
   
   ion-searchbar {
@@ -48,12 +49,18 @@ ion-segment {
     --border-radius: 25px;
     font-family: 'Enriqueta';
     height: 50px;
+    flex-grow: 1;
+    max-width: 400px; // antes 700px
+    margin: 0 10px;   // menos margen
   }
+  
   
   /* Contenedor de los botones */
   .header-buttons {
     display: flex;
     gap: 15px; /* Espaciado entre los botones */
+    min-width: 120px; // asegura espacio mínimo para los botones
+    flex-shrink: 0;
   }
   
   /* Estilos para el botón del carrito */
@@ -114,7 +121,7 @@ ion-segment {
 }
 
 ion-segment-button {
-  --background: #fff;
+  --background: #ffe0ef;
   --color: #e75480;
   --color-checked: #fff;
   --indicator-color: transparent;
@@ -122,15 +129,14 @@ ion-segment-button {
   font-size: 1.1rem;
   border-radius: 20px;
   margin: 0 8px;
-  border: 2px solid #e75480;
-  box-shadow: 0 2px 8px rgba(31,38,135,0.04);
   transition: background 0.2s, color 0.2s, border 0.2s;
 }
 
 ion-segment-button.segment-button-checked {
-  background: #e75480 !important;
-  color: #fff !important;
-  border: 2px solid #e75480 !important;
+  background: inherit !important;
+  color: inherit !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 ion-label {
