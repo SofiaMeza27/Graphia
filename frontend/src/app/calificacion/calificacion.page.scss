@@ -15,6 +15,7 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   gap: 16px;
+  align-items: flex-start;
   background-color: #F0F0F0;
   padding: 16px;
   border-radius: 8px;
@@ -24,7 +25,10 @@ h2 {
 
 .calificacion-item {
   flex: 1;
+  display: flex;
   text-align: center; /* Centra el texto dentro de cada sección */
+  flex-direction: column; // Esto pone el label arriba del input/textarea
+  justify-content: flex-start;
 }
 
 .calificacion-item label {
@@ -38,6 +42,7 @@ h2 {
 .calificacion-item input,
 .calificacion-item textarea {
   width: 100%;
+  min-height: 40px;
   height: 40px; /* Asegura que ambas cajas tengan la misma altura */
   padding: 8px;
   border: 1px solid #ddd;
@@ -45,6 +50,7 @@ h2 {
   font-size: 14px;
   font-family: 'Enriqueta';
   box-sizing: border-box; /* Incluye el padding en el tamaño total */
+  resize: none;
 }
 
 textarea {
@@ -56,7 +62,7 @@ textarea {
   display: flex;
   justify-content: center;
   margin: 8px 0;
-  color: #ffc107;
+  color: #ffffff;
 }
 
 .rating ion-icon {
@@ -70,6 +76,7 @@ textarea {
 
 ion-button {
   color: #ffffff; /* Cambia el color del texto a negro */
+  --background:#e75480;
   font-weight: bold;
   margin-top: 16px;
   padding: 20px 650px; /* Reduce el tamaño del botón */

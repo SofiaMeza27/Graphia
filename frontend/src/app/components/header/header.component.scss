@@ -61,6 +61,8 @@ ion-segment {
     gap: 15px; /* Espaciado entre los botones */
     min-width: 120px; // asegura espacio mínimo para los botones
     flex-shrink: 0;
+    border-radius: 0 !important;
+    --border-radius: 0 !important;
   }
   
   /* Estilos para el botón del carrito */

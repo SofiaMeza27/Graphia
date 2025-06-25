@@ -30,7 +30,16 @@ const routes: Routes = [
   {
     path: 'productos',
     loadComponent: () => import('./productos/productos.page').then(m => m.ProductosPage)
+  },
+  {
+    path: 'compra',
+    loadChildren: () => import('./compra/compra.module').then( m => m.CompraPageModule)
+  },
+  {
+    path: 'compra',
+    loadChildren: () => import('./compra/compra.module').then(m => m.CompraPageModule)
   }
+
 
 ];
 
