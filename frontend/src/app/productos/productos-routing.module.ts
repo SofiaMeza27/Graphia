@@ -10,5 +10,8 @@ const routes: Routes = [
   }
 ];
 
-
-export default RouterModule.forChild(routes);
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
+})
+export class ProductosPageRoutingModule {}

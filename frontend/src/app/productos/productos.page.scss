@@ -1,207 +1,299 @@
-.productos-grid {
+/* --- Layout General para Contenido Principal --- */
+.libretas-layout { /* Se usa el nombre de clase del diseño deseado */
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 32px;
-  padding: 32px 0;
+  max-width: 1200px;
+  margin: 32px auto;
+  gap: 30px;
+  padding: 0 20px;
+  align-items: flex-start;
 }
 
+/* --- Filtros del Sidebar --- */
+.filter-sidebar {
+  flex-shrink: 0;
+  width: 250px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(31, 38, 135, 0.08);
+  padding: 20px;
+}
+
+.filter-sidebar h3 {
+  font-family: 'Enriqueta', serif;
+  color: #3828B0;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-item h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Enriqueta', serif;
+  color: #3828B0;
+  font-size: 1.2rem;
+  padding: 10px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.filter-item h4 ion-icon {
+  font-size: 1.1rem;
+  color: #e75480;
+}
+
+.filter-options {
+  padding-top: 10px;
+  max-height: 0; /* Oculto por defecto para animación */
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.filter-options.open {
+  max-height: 500px; /* Suficientemente grande para contener los elementos */
+  transition: max-height 0.4s ease-in;
+}
+
+.filter-options ion-item {
+    --background: transparent;
+    --border-width: 0;
+    --inner-border-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    min-height: auto;
+    --padding-start: 0;
+    --padding-end: 0;
+}
+
+.filter-options ion-label {
+  font-family: 'Enriqueta', serif;
+  color: #555;
+  font-size: 0.95rem;
+  margin-left: 8px;
+}
+
+.filter-options ion-radio {
+    --color: #e75480;
+    --color-checked: #e75480;
+}
+
+/* Estilos para el Filtro de Precio */
+.price-filter {
+  margin-top: 20px;
+}
+.price-filter h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Enriqueta', serif;
+  color: #3828B0;
+  font-size: 1.2rem;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.price-filter h4 ion-icon {
+  font-size: 1.1rem;
+  color: #e75480;
+}
+
+ion-range {
+  --bar-background: #ffe0ef;
+  --bar-background-active: #e75480;
+  --knob-background: #e75480;
+  --knob-border-radius: 50%;
+  --knob-box-shadow: 0 2px 8px rgba(31,38,135,0.1);
+  padding: 0 5px;
+}
+
+.price-range-display {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Enriqueta', serif;
+  color: #3828B0;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+
+/* --- Contenedor de la Cuadrícula de Productos --- */
+.products-grid { /* Usamos el nombre de clase del diseño deseado */
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 0;
+  width: 100%;
+}
+
+/* --- Mejoras en la Tarjeta de Producto --- */
 .producto-card {
-  width: 320px;
-  background: #ffafcc;
-  border-radius: 20px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-  transition: transform 0.2s;
+  width: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(31, 38, 135, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
   font-family: 'Enriqueta', serif;
+  overflow: hidden;
 }
 
 .producto-card:hover {
-  transform: translateY(-6px) scale(1.03);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(31, 38, 135, 0.15);
 }
 
 .producto-img {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 20px 20px 0 0;
+  border-radius: 12px 12px 0 0;
+}
+
+.producto-details {
+  padding: 15px;
+  text-align: center;
 }
 
 ion-card-title {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   color: #3828B0;
   font-family: 'Enriqueta', serif;
+  margin-bottom: 8px;
+  line-height: 1.3;
 }
 
 .producto-desc {
-  color: #333;
+  color: #666;
+  font-size: 0.9rem;
   margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .producto-precio {
   color: #e75480;
   font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.productos-filtros {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  align-items: flex-end;
-  justify-content: flex-start;
-  background: #ffafcc;
-  padding: 18px 32px 18px 32px;
-  border-radius: 18px;
-  margin: 32px auto 32px auto;
-  max-width: 1100px;
-  box-shadow: 0 2px 12px rgba(31,38,135,0.08);
-  position: relative;
-}
-
-ion-item {
-  --background: transparent;
-  --highlight-background: transparent;
-  border: none;
-  box-shadow: none;
-  margin: 0;
-  min-width: 220px;
-  align-items: flex-end;
-  display: flex;
-  gap: 12px;
-  padding-bottom: 0 !important; // <--- fuerza sin padding extra abajo
-  height: 56px; // iguala la altura a los botones
-}
-
-.filtro-btn, .limpiar-btn {
-  background: #e75480;
-  color: #fff;
-  font-family: 'Enriqueta', serif;
-  border-radius: 16px;
-  font-size: 1rem;
-  padding: 0 28px;
-  box-shadow: 0 2px 8px rgba(31,38,135,0.07);
-  border: none;
-  transition: background 0.2s;
-  height: 44px; // iguala la altura a los ion-item
-  margin-top: 0; // <--- quita el margen superior
-  display: flex;
-  align-items: center;
-}
-
-.limpiar-btn {
-  background: #d36c8c;
+  font-size: 1.35rem;
+  margin-top: 10px;
 }
 
 .producto-rating {
-  margin-bottom: 6px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #FFD700;
 }
 
 .producto-rating ion-icon {
-  font-size: 1.1rem;
+  font-size: 1rem;
   vertical-align: middle;
 }
 
-ion-alert {
-  --background: #ffe0ef;
-  --border-radius: 18px;
-}
-
-.alert-wrapper.sc-ion-alert-md {
-  border-radius: 18px !important;
-  box-shadow: 0 4px 24px rgba(31,38,135,0.10);
-}
-
-.alert-radio-label.sc-ion-alert-md {
+.no-products-message {
+  grid-column: 1 / -1;
+  text-align: center;
   font-family: 'Enriqueta', serif;
-  color: #3828B0;
+  color: #666;
   font-size: 1.1rem;
+  padding: 40px;
 }
 
-.alert-button.sc-ion-alert-md {
-  font-family: 'Enriqueta', serif;
-  font-size: 1rem;
-  border-radius: 12px;
-  margin: 0 6px;
-  padding: 6px 22px;
-  transition: background 0.2s, color 0.2s;
-}
-
-.alert-button.sc-ion-alert-md.alert-button-cancel {
-  background: #fff;
-  color: #e75480;
-  border: 2px solid #e75480;
-}
-
-.alert-button.sc-ion-alert-md:not(.alert-button-cancel) {
-  background: #e75480;
-  color: #fff;
-  border: 2px solid #e75480;
-}
-
-.alert-button.sc-ion-alert-md:not(.alert-button-cancel):hover,
-.alert-button.sc-ion-alert-md.alert-button-cancel:hover {
-  background: #3828B0;
-  color: #fff;
-  border-color: #3828B0;
-}
-
-ion-label {
-  font-family: 'Enriqueta', serif;
-  color: #3828B0;
-  font-size: 1.1rem;
-  margin-right: 0;
-  min-width: 90px;
-  flex-shrink: 0;
-}
-
-ion-input, ion-select {
-  flex: 1;
-  min-width: 120px;
-  max-width: 180px;
-}
-
-.filtros-botones {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  margin-left: auto;
-  align-items: flex-end;
-  height: 56px; // iguala la altura a los ion-item
-}
-
+/* --- Paginación --- */
 .paginacion {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 18px;
-  margin: 32px 0 0 0;
+  gap: 12px;
+  margin: 40px 0 60px 0;
+  width: 100%;
 }
 
 .pagina-circulo {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: #31CDC2;
-  color: #fff;
-  border: none;
+  background: #f0f0f0;
+  color: #3828B0;
+  border: 1px solid #ddd;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  box-shadow: 0 2px 8px rgba(31,38,135,0.07);
+  font-size: 1.1rem;
+  font-family: 'Enriqueta', serif;
+  box-shadow: none;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.pagina-circulo.active {
+  background: #e75480;
+  color: #fff;
+  border-color: #e75480;
+  box-shadow: 0 2px 10px rgba(231, 84, 128, 0.3);
+}
+
+.pagina-circulo:hover:not(.active):not([disabled]) {
+  background: #ffe0ef;
+  border-color: #e75480;
+  color: #e75480;
 }
 
 .pagina-circulo[disabled] {
-  background: #b2e6e3;
-  color: #fff;
+  background: #f8f8f8;
+  color: #bbb;
   cursor: not-allowed;
+  border-color: #eee;
 }
 
-.pagina-info {
-  font-family: 'Enriqueta', serif;
-  font-size: 1.1rem;
-  color: #3828B0;
+
+/* --- **IMPORTANTE:** Elimina o comenta los estilos antiguos de filtros horizontales --- */
+/* Estas clases ya NO se usan en el nuevo HTML. */
+.productos-filtros,
+.filtros-botones,
+ion-item /* Si este estilo afecta la barra horizontal antigua, elimínalo.
+            Si es un estilo global para todos los ion-item y quieres que se mantenga,
+            asegúrate de que no cause conflictos. Los ion-item dentro de
+            .filter-options ya están sobrescritos. */
+{
+  display: none !important; /* Oculta completamente el diseño de filtros antiguo */
+}
+
+
+/* --- Ajustes Responsivos --- */
+@media (max-width: 900px) {
+  .libretas-layout {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  .filter-sidebar {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  .producto-card {
+    max-width: 320px;
+    margin: 0 auto;
+  }
 }
